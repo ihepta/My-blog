@@ -356,8 +356,8 @@ HTML5？
 			p:only-child		选择属于其父元素的唯一子元素的每个 <p> 元素。
 			p:nth-child(2)	选择属于其父元素的第二个子元素的每个 <p> 元素。
 
-			:after			在元素之前添加内容,也可以用来做清除浮动。
-			:before			在元素之后添加内容
+			::after			在元素之前添加内容,也可以用来做清除浮动。
+			::before			在元素之后添加内容
 	 	    :enabled  		
 			:disabled 		控制表单控件的禁用状态。
 			:checked        单选框或复选框被选中。
@@ -644,11 +644,11 @@ HTML5？
 		1、父级div定义height；
 		2、父级div 也一起浮动；
 		3、常规的使用一个class；
-			.clearfix:before, .clearfix:after {
+			.clearfix::before, .clearfix::after {
 			    content: " ";
 			    display: table;
 			}
-			.clearfix:after {
+			.clearfix::after {
 			    clear: both;
 			}
 			.clearfix {
@@ -656,7 +656,7 @@ HTML5？
 			}
 
 		4、SASS编译的时候，浮动元素的父级div定义伪类:after
-			&:after,&:before{
+			&::after,&::before{
 			    content: " ";
 		        visibility: hidden;
 		        display: block;
@@ -1368,7 +1368,7 @@ HTML5？
 
         3、在URL后面加上一个随机数： "fresh=" + Math.random();。
 
-        4、在URL后面加上时间搓："nowtime=" + new Date().getTime();。
+        4、在URL后面加上时间戳："nowtime=" + new Date().getTime();。
 
         5、如果是使用jQuery，直接这样就可以了 $.ajaxSetup({cache:false})。这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。
 
@@ -1725,7 +1725,7 @@ jQuery中没有提供这个功能，所以你需要先编写两个jQuery的扩�
 
 ## <a name='other'>其他问题</a>
 
-- 原来公司工作流程是怎么样的，如何与其他人协作的？如何夸部门合作的？
+- 原来公司工作流程是怎么样的，如何与其他人协作的？如何跨部门合作的？
 
 - 你遇到过比较难的技术问题是？你是如何解决的？
 
