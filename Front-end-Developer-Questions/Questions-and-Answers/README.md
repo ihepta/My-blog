@@ -77,7 +77,6 @@
 	更新记录：
 	2016年3月25日：新增ECMAScript6 相关问题
 
-
 ### 更新时间:  2016-3-25
 
 
@@ -120,7 +119,7 @@
 
    	（1）行内元素有：a b span img input select strong（强调的语气）
    	（2）块级元素有：div ul ol li dl dt dd h1 h2 h3 h4…p
-   	
+   		其中：dl dt dd用于定义列表
    	（3）常见的空元素：
    		<br> <hr> <img> <input> <link> <meta>
    		鲜为人知的是：
@@ -139,6 +138,14 @@
 		（2）页面被加载的时，link会同时被加载，而@import引用的CSS会等到页面被加载完再加载;
 
 		（3）import是CSS2.1 提出的，只在IE5以上才能被识别，而link是XHTML标签，无兼容问题;
+```
+	（4）如果要使用@import，必须保证@import在除了@charset之外的其他css规则之前，否则import会被浏览器忽略；
+```
+
+```
+	（5）在ie下使用@import会改变文件下载顺序，如果有较长的js需要下载，则可能会让页面长时间空白，或者js引用样式的方法报错。
+```
+
 
 
 - 介绍一下你对浏览器内核的理解？
